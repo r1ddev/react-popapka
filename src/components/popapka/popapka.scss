@@ -1,0 +1,81 @@
+#popapka-container {
+	.dimmer {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;			
+		z-index: 123;
+	}
+
+	.popapka-animation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 124;
+
+		.popup {
+			// background: rgba(0, 0, 0, 0.8);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			.content {
+				border: 1px solid #adadad;
+				text-align: left;
+				background: #fff;	
+				
+				align-items: center;
+				z-index: 5;
+				border-radius: 10px;
+				overflow: hidden;
+				min-width: 300px;
+	
+				.title {
+					background: #f7f7f7;
+					padding: 1rem;
+					font-weight: bold;
+				}
+	
+				.c {
+					padding: 1rem;
+				}
+	
+				.buttons {
+					padding: 1rem;
+					display: flex;
+					justify-content: flex-end;
+	
+					.btn {
+						background: transparent;
+						border: none;
+						text-transform: uppercase;
+						padding: .5rem 1rem;
+						cursor: pointer;
+						outline: none;
+						color:#03a9f4;
+						font-weight: bold;
+						transition: .2s;
+						border-radius: 4px;
+	
+						&:hover {
+							background: #03a9f41a;
+						}
+	
+						&:active {
+							background: #03a8f44b;
+						}
+					}
+				}
+			}
+		}
+	}
+}
