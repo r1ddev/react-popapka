@@ -82,20 +82,18 @@ class PopapkaContainer extends React.Component {
 									variants={variantsOpacityAnimation} />
 
 								<motion.div
-									
 									className="popapka-animation"
 									initial="exit"
 									animate="enter"
 									exit="exit"
 									variants={this.getAnimationType(modal.animation)} >
 
-								
 									<div className="popup" onClick={() => this.c(modalIndex)}>
 										<div className="content" onClick={(e) => e.stopPropagation()}>
 											{ modal.title !== null && (
 												<div className="title">{modal.title}</div>
 											)}
-											<div className="c">{modal.content}</div>
+											<div className="body">{modal.content}</div>
 											{ modal.positiveButton && (
 												<div className="buttons">
 													<button className="btn positive" onClick={() => modal.positiveButton()}>OK</button>

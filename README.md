@@ -25,8 +25,8 @@ class Example extends Component {
   open = () => {
     this.popapka = popapka({
       title: "this is my modal!!",
-      content: (<div>this is content of my modal</button>),
-      positiveButton: () => { closePopapka(this.popup1) },
+      content: (<div>this is content of my modal</div>),
+      positiveButton: () => { closePopapka(this.popapka) },
       animation: 'bub'
     })
   }
