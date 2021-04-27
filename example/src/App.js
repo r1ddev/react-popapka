@@ -1,7 +1,8 @@
 import React from "react";
 
 import Header from './components/header';
-import { PopapkaContainer, popapka, closePopapka } from './components/popapka';
+import { PopapkaContainer, popapka, closePopapka } from 'react-popapka';
+import 'react-popapka/src/popapka.scss'
 
 import './App.css';
 
@@ -46,7 +47,6 @@ class App extends React.Component {
                         className="App-link"
                         href="#"
                         onClick={this.openModal}
-                        rel="noopener noreferrer"
                     >
                         Open popapka
                     </a>
