@@ -23,10 +23,12 @@ const variantsFromTopAnimation = {
 	enter: {
 		opacity: 1,
 		marginTop: 0,
+		transition: "easeIn"
 	},
 	exit: {
 		opacity: 0,
 		marginTop: -50,
+		transition: "easeIn"
 	}
 }
 
@@ -73,7 +75,7 @@ class PopapkaContainer extends React.Component {
 				<AnimatePresence>
 					{l.map((modal, modalIndex) => {
 						return (
-							<div key={modalIndex}>
+							<div key={modalIndex} className={modal?.settings?.className || "popapka"}>
 								<motion.div
 									className="dimmer"
 									initial="exit"

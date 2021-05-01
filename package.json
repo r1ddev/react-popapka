@@ -1,7 +1,7 @@
 {
   "name": "react-popapka",
-  "version": "1.0.2",
-  "description": "Simple react popup component",
+  "version": "1.0.4",
+  "description": "Simple react popup function",
   "author": "r1ddev",
   "license": "MIT",
   "repository": "r1ddev/react-popapka",

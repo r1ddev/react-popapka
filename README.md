@@ -1,6 +1,6 @@
 # react-popapka
 
-> Simple react popup component
+> Simple react popup function
 
 [![NPM](https://img.shields.io/npm/v/react-popapka.svg)](https://www.npmjs.com/package/react-popapka) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
