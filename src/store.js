@@ -34,14 +34,22 @@ const add = (params, settings = {}) => {
 
 	l.push(popupParams);
 	callback();
-	return l.length-1
+	return l.length - 1;
 };
 
-const close = (index = 0) => {
+const close = (index = null) => {
+	if (index === null) index = l.length - 1;
 	if (l.length > index) {
 		l.splice(index, 1);
 		callback();
 	}
 };
 
-export { l, add, close, callback, setCallback };
+const closeAll = (index = 0) => {
+	while (l.length > 0) {
+		l.pop();
+	}
+	callback();
+};
+
+export { l, add, close, closeAll, callback, setCallback };
