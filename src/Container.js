@@ -92,8 +92,13 @@ class PopapkaContainer extends React.Component {
 
 									<div className="popup" onClick={() => this.close(modalIndex)}>
 										<div className="content" onClick={(e) => e.stopPropagation()}>
+											{ modal.close && (
+												<div className={"close" + (modal.close === "outside" ? " outside" : "")} role="button" onClick={() => this.close(modalIndex)}>
+													<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#fff" strokeWidth="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#fff" strokeWidth="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg>
+												</div>
+											)}
 											{ modal.title !== null && (
-												<div className="title">{modal.title}</div>
+												<div className={"title" + (modal.close === "inside" ? " close-indent" : "")}>{modal.title}</div>
 											)}
 											<div className="body">{modal.content}</div>
 											{ modal.positiveButton && (

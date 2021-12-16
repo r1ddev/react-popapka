@@ -20,7 +20,6 @@
 		z-index: 124;
 
 		.popup {
-			// background: rgba(0, 0, 0, 0.8);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -31,20 +30,45 @@
 			align-items: center;
 			
 			.content {
+				position: relative;
 				border: 1px solid #adadad;
 				text-align: left;
 				background: #fff;	
-				
 				align-items: center;
 				z-index: 5;
 				border-radius: 10px;
-				overflow: hidden;
 				min-width: 300px;
+
+				.close {
+					padding: 1rem;
+					position: absolute;
+					top: 0;
+					right: 0;
+					transform: translate(0%, 0%);
+					cursor: pointer;
+
+					&.outside {
+						transform: translate(100%, -100%);
+						padding: 5px;
+					}
+
+					svg {
+						line {
+							stroke: rgb(153, 153, 153);
+						}
+					}
+				}
 	
 				.title {
 					background: #f7f7f7;
 					padding: 1rem;
 					font-weight: bold;
+					border-top-left-radius: inherit;
+					border-top-right-radius: inherit;
+
+					&.close-indent {
+						padding-right: 2.7rem;
+					}
 				}
 	
 				.body {

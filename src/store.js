@@ -16,12 +16,13 @@ const add = (params, settings = {}) => {
 
 			break;
 		case 'object':
-			const {title, content, positiveButton, animation = 'opacity'} = params;
+			const {title, content, positiveButton, animation = 'opacity', close = null} = params;
 
 			popupParams.title = title;
 			popupParams.content = content;
 			popupParams.positiveButton = positiveButton;
 			popupParams.animation = animation;
+			popupParams.close = close;
 
 			break;
 		default:
