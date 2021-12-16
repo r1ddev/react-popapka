@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from './components/header';
-import { PopapkaContainer, popapka, closePopapka } from 'react-popapka';
+import { PopapkaContainer, popapka, closePopapka, closeAllPopapka } from 'react-popapka';
 import 'react-popapka/src/popapka.scss'
 
 import './App.css';
@@ -27,14 +27,14 @@ class App extends React.Component {
 
         this.popup2 = popapka({
             title: "this is my modal 2",
-            content: (<div><br/><br/><button onClick={this.openModal3}>open 3</button></div>),
+            content: (<div><br/><br/><button onClick={this.openModal3}>open 3</button><br/><button onClick={closeAllPopapka}>close all</button></div>),
             positiveButton: () => { closePopapka(this.popup2) },
             animation: 'fromTop'
         })
     }
 
     openModal3 = () => {
-        popapka("Asd")
+        popapka("Hello")
     }
 
     render () {

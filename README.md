@@ -16,7 +16,7 @@ npm install --save react-popapka
 import React, { Component } from 'react'
 
 import { PopapkaContainer, popapka, closePopapka } from 'react-popapka';
-import 'react-popapka/src/popapka.scss'
+import 'react-popapka/dist/index.css';
 
 class Example extends Component {
 
