@@ -51,7 +51,7 @@ class PopapkaContainer extends React.Component {
 		});
 	}
 
-	c = (index) => {
+	close = (index) => {
 		close(index)
 	}
 
@@ -71,7 +71,7 @@ class PopapkaContainer extends React.Component {
 
 	render() {
 		return (
-			<div id="popapka-container">
+			<div id="popapka-container" {...this.props}>
 				<AnimatePresence>
 					{l.map((modal, modalIndex) => {
 						return (
@@ -90,7 +90,7 @@ class PopapkaContainer extends React.Component {
 									exit="exit"
 									variants={this.getAnimationType(modal.animation)} >
 
-									<div className="popup" onClick={() => this.c(modalIndex)}>
+									<div className="popup" onClick={() => this.close(modalIndex)}>
 										<div className="content" onClick={(e) => e.stopPropagation()}>
 											{ modal.title !== null && (
 												<div className="title">{modal.title}</div>
