@@ -92,6 +92,11 @@ popapka({
 Close popapka by **index number** of opened popapka.
 If you only have one popapka, you can simply call `closePopapka(0)`.
 In complex cases, `popapka` function return its own index.
+`closePopapka()` without parameters will close latest opened popapka.
+
+#### closeAllPopapka
+
+`closeAllPopapka()` will close all opened popapka.
 
 ## API
 
@@ -107,6 +112,7 @@ title | String |  | Title of popapka. On top of modal and bold highlighted
 content | String or jsx |  | Main text
 positiveButton | function |  | Add 'OK' button at bottom with your callback
 animation | *one of the below animations* | opacity | Animation for appear and disappear popapka
+close | inside, outside |  | Position of close button. Will not be displayed if nothing is passed
 
 #### settings object:
 

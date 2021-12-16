@@ -26,10 +26,11 @@ class App extends React.Component {
         e.preventDefault();
 
         this.popup2 = popapka({
-            title: "this is my modal 2",
+            title: "this is modal with close button",
             content: (<div><br/><br/><button onClick={this.openModal3}>open 3</button><br/><button onClick={closeAllPopapka}>close all</button></div>),
             positiveButton: () => { closePopapka(this.popup2) },
-            animation: 'fromTop'
+            animation: 'fromTop',
+            close: 'outside'
         })
     }
 
